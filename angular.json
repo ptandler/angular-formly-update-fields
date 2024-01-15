@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-formly-update-fields:build:production"
+              "buildTarget": "angular-formly-update-fields:build:production"
             },
             "development": {
-              "browserTarget": "angular-formly-update-fields:build:development"
+              "buildTarget": "angular-formly-update-fields:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-formly-update-fields:build"
+            "buildTarget": "angular-formly-update-fields:build"
           }
         },
         "test": {
