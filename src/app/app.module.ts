@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyMaterialModule } from '@ngx-formly/material';
+import {provideAnimations} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { FormlyMaterialModule } from '@ngx-formly/material';
     ReactiveFormsModule,
     FormlyMaterialModule
   ],
-  providers: [],
+  providers: [
+    provideAnimations()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
