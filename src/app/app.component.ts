@@ -16,6 +16,7 @@ const initialFields = [
     },
     hooks: {
       onInit: (field: FormlyFieldConfig) => {
+        console.log('######## add valueChange subscription for field = ', field);
         field.formControl?.valueChanges.pipe(distinctUntilChanged()).subscribe((value) => {
           if (value > 0) {
             numberOfInputs.set(value)
@@ -85,6 +86,7 @@ export class AppComponent {
   });
 
   onSubmit() {
+    console.log(this.model);
     if (this.form.valid) {
       alert(JSON.stringify(this.model, null, 2));
     }

@@ -1,19 +1,21 @@
-<div class="header">
-  <img src="https://raw.githubusercontent.com/ngx-formly/ngx-formly/v5/logo.svg?sanitize=true" alt="" width="72" height="72">
-  <h4 class="mat-h2">Angular Formly Material</h4>
+<div style="padding: 32px">
+  <div class="header">
+        <h4 class="mat-h2">Angular Formly Material</h4>
+    <p>Change the "number of input fields" to dynamically adjust the number of text inputs shown.</p>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <formly-form
+      [form]="form"
+      [model]="model"
+      [fields]="fields()"/>
+
+    <button type="submit" color="primary" mat-raised-button>
+      Submit
+    </button>
+
+    <button type="reset" color="warn" mat-raised-button>
+      Reset
+    </button>
+  </form>
 </div>
-
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <formly-form
-    [form]="form"
-    [model]="model"
-    [fields]="fields()"/>
-
-  <button type="submit" color="primary" mat-raised-button>
-    Submit
-  </button>
-
-  <button type="reset" color="warn" mat-raised-button>
-    Reset
-  </button>
-</form>
