@@ -1,6 +1,20 @@
 # AngularFormlyUpdateFields
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+Small project to try things in formly
+
+Findings:
+
+- when the fields are changed
+  - the existing components are kept
+  - the model is kept, also for inputs that are not visible currently
+  - the input focus is lost, so when the change happens while typing, the typing is interrupted 
+- when the model is changed
+  - the components do not change
+  - also input focus is unchanged, so you can continue typing, while the model is updated (is another prop is changed)
+
+TODO
+
+- does this work as well for FormArrays?
 
 ## Development server
 
