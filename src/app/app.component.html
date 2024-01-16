@@ -1,11 +1,14 @@
 <div style="padding: 32px">
   <div class="header">
-        <h4 class="mat-h2">Angular Formly Material</h4>
+    <h4 class="mat-h2">Angular Formly Material</h4>
     <p>Change the "number of input fields" to dynamically adjust the number of text inputs shown.</p>
   </div>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <button (click)="increaseNumberOfInputsAfterDelay()">Increase Number of Inputs after 3 sec delay</button>
+    <div style="padding: 15px 0">
+      <button (click)="increaseNumberOfInputsAfterDelay()">Increase Number of Inputs after 3 sec delay</button>
+      <button (click)="updateNumberOfInputsInModel()">Update Number of Inputs in Model</button>
+    </div>
 
     <formly-form
       [form]="form"

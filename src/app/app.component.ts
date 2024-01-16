@@ -86,13 +86,17 @@ export class AppComponent {
   });
 
   onSubmit() {
-    console.log(this.model);
+    console.log(this.model());
     if (this.form.valid) {
-      alert(JSON.stringify(this.model, null, 2));
+      alert(JSON.stringify(this.model(), null, 2));
     }
   }
 
   increaseNumberOfInputsAfterDelay() {
     setTimeout(() => numberOfInputs.set(numberOfInputs() + 1), 3000)
+  }
+
+  updateNumberOfInputsInModel() {
+    setTimeout(() => this.model.update(model => ({...model, numberOfInputs: numberOfInputs()})), 3000)
   }
 }
