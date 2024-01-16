@@ -66,8 +66,8 @@ const initialFields = [
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  form = new FormGroup({});
-  model = {};
+  readonly form = new FormGroup({});
+  readonly model = signal({});
   // fields: FormlyFieldConfig[] = initialFields;
   readonly fields = computed<FormlyFieldConfig[]>(() => {
     const fields: FormlyFieldConfig[] = [...initialFields]
@@ -90,5 +90,9 @@ export class AppComponent {
     if (this.form.valid) {
       alert(JSON.stringify(this.model, null, 2));
     }
+  }
+
+  increaseNumberOfInputsAfterDelay() {
+    setTimeout(() => numberOfInputs.set(numberOfInputs() + 1), 3000)
   }
 }

@@ -5,9 +5,11 @@
   </div>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <button (click)="increaseNumberOfInputsAfterDelay()">Increase Number of Inputs after 3 sec delay</button>
+
     <formly-form
       [form]="form"
-      [model]="model"
+      [model]="model()"
       [fields]="fields()"/>
 
     <button type="submit" color="primary" mat-raised-button>
